@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "430746963295",
+    "project_id": "f-mimim",
+    "storage_bucket": "f-mimim.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:430746963295:android:122039c05767001708baea",
+        "android_client_info": {
+          "package_name": "com.mimim.demo.mimim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "430746963295-98rfijmp6o1pbu2k9m7upjurmhdjn3mh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSnWYG7WpD3EsM-QwLutSDvOQKK_U8LE4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "430746963295-98rfijmp6o1pbu2k9m7upjurmhdjn3mh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "430746963295-5l7qp4lfietbnequhvued3j4konr8pl9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mimim.demo.mimim"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
