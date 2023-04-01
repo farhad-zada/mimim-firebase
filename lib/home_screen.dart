@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import './city.dart';
@@ -54,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
             elevatedButton(
               title: 'get data',
               onPressed: () {
-                final docRef = db
+                db
                     .collection('cities')
                     .where('population', isLessThan: 1000000)
                     .where('capital', isEqualTo: false)

@@ -3,7 +3,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:mimim/data_add.dart';
 import 'package:mimim/home_screen.dart';
 import 'package:mimim/firebase_options.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -38,7 +37,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final FirebaseFirestore _firebaseFirestore = FirebaseFirestore.instance;
   int _counter = 0;
 
   void _incrementCounter() {

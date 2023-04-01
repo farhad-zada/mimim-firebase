@@ -1,0 +1,19 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "cities",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "capital",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "population",
+          "order": "ASCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}
