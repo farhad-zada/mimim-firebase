@@ -1,14 +1,30 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:mimim/data_add.dart';
 import 'package:mimim/home_screen.dart';
 import 'package:mimim/firebase_options.dart';
+import 'package:mimim/screens/course_screen.dart';
+import 'package:mimim/screens/create_course.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  if (kDebugMode) {
+    try {
+      FirebaseFirestore.instance.useFirestoreEmulator(
+        'localhost',
+        8080,
+      );
+    } catch (e) {
+      // ignore: avoid_print
+      print(e);
+    }
+  }
   runApp(const MyApp());
 }
 
@@ -21,6 +37,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+        useMaterial3: true,
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
@@ -73,6 +90,32 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: const Text(
                 'Go to Home screen',
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const CreateCourse(),
+                  ),
+                );
+              },
+              child: const Text(
+                'Go to CreateCourse screen',
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const CourseScreen(),
+                  ),
+                );
+              },
+              child: const Text(
+                'Go to Crourse screen',
               ),
             ),
             ElevatedButton(
